@@ -85,7 +85,7 @@ export const after = [
   {
     n: "1",
     name: "Copy the files twice",
-    beat: "Off the card in the little box, onto the laptop. Then onto a drive or a cloud folder. Don't wipe the card until you've heard it play.",
+    beat: "Off the card in the little box, onto the laptop. Then into Google Drive → Late Night Brain Fog → 1-tape. Don't wipe the card until you've heard it play.",
   },
   {
     n: "2",
@@ -95,7 +95,7 @@ export const after = [
   {
     n: "3",
     name: "Cut only what you must",
-    beat: "No music under the talking. Leave the quiet. If a splice is ugly, fix that splice only.",
+    beat: "No music under the talking. Leave the quiet. If a splice is ugly, fix that splice only. James listens. I cut. The public site never sees the raw tape.",
   },
   {
     n: "4",
