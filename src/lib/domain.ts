@@ -10,6 +10,7 @@ export const domainCutover = {
   path: "GitHub holds the files. Vercel runs the site. Squarespace only keeps the name and points it.",
   github: "JamesTRichmond",
   repo: "brainfogpodcast",
+  live: "https://brainfogpodcast.vercel.app",
   steps: [
     {
       n: "1",

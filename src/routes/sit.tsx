@@ -65,7 +65,13 @@ function Sit() {
             <p className="text-xs font-medium uppercase tracking-[0.28em] text-sodium">
               {brand.domain}
             </p>
-            <h2 className="mt-2 font-display text-3xl font-semibold text-ink">The name is parked</h2>
+            <h2 className="mt-2 font-display text-3xl font-semibold text-ink">The show is live. The name is catching up.</h2>
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">
+              Right now: {domainCutover.live}. GitHub: github.com/{domainCutover.github}/{domainCutover.repo}. The .com is still the river until DNS (4 hour TTL) flips.
+            </p>
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">
+              Email list on the live host needs a Postgres database in Vercel (Storage → Postgres → connect to this project). Until then the form will say it couldn't save. That is honest. Do not pretend the addresses are kept.
+            </p>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">{domainCutover.cannot}</p>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">{domainCutover.ready}</p>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">{domainCutover.warn}</p>

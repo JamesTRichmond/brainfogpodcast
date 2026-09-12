@@ -10,6 +10,12 @@ export const joinWaitlist = createServerFn({ method: "POST" })
     if (!EMAIL.test(email) || email.length > 200) {
       return { ok: false as const, error: "That doesn't look like an email." };
     }
+    if (process.env.VERCEL === "1" && !process.env.DATABASE_URL?.trim()) {
+      return {
+        ok: false as const,
+        error: "The list isn't wired on the live host yet. Try again after a database is attached.",
+      };
+    }
     const sql = await getSql();
     await sql`
       insert into waitlist (email) values (${email})

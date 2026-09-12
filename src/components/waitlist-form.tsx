@@ -34,8 +34,7 @@ export function WaitlistForm() {
       </label>
       <p className="text-sm leading-relaxed text-muted">
         Leave an email. We will not write you until an hour is actually up. This
-        preview keeps the address. It does not send mail from here. When the
-        show lives at brainfogpodcast.com, this is the list.
+        keeps the address. It does not send mail from here.
       </p>
       {status === "ok" ? (
         <p className="text-sm text-ink">You're on the list. No mail until there's tape.</p>

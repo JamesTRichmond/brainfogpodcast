@@ -45,7 +45,7 @@ export function ShowShell({ children }: { children: ReactNode }) {
       </header>
       <main id="main">{children}</main>
       <footer className="border-t border-ink/10 px-4 py-10 text-center text-xs text-haze">
-        {brand.name} · {brand.host} · {brand.tell} · will live at {brand.domain}
+        {brand.name} · {brand.host} · {brand.tell} · {brand.domain}
       </footer>
     </div>
   );
