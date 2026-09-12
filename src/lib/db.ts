@@ -3,12 +3,17 @@ import { pendingMigrations } from "../../scripts/migration-plan.mjs";
 /** Which database backend is active. */
 export type DbSource = "neon" | "pglite";
 
-// An empty/whitespace DATABASE_URL (an easy misconfig in deploy UIs) must mean
-// "unset" — otherwise production would silently run on the PGLite fallback.
-const rawDatabaseUrl =
-  typeof process !== "undefined" ? process.env.DATABASE_URL : undefined;
-const databaseUrl =
-  rawDatabaseUrl && rawDatabaseUrl.trim() ? rawDatabaseUrl : undefined;
+function firstUrl(...keys: string[]) {
+  if (typeof process === "undefined") return undefined;
+  for (const key of keys) {
+    const v = process.env[key]?.trim();
+    if (v) return v;
+  }
+  return undefined;
+}
+
+// Neon-on-Vercel injects POSTGRES_URL. Grok / classic injects DATABASE_URL.
+const databaseUrl = firstUrl("DATABASE_URL", "POSTGRES_URL", "POSTGRES_PRISMA_URL");
 
 /**
  * Active backend: real **Neon** when `DATABASE_URL` is set (deployed / configured
