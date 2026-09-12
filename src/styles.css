@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --color-night: #14110e;
+  --color-raised: #1e1a16;
+  --color-sodium: #e08a32;
+  --color-tv: #3a7a9c;
+  --color-haze: #8a6e58;
+  --color-ink: #f0e4d0;
+  --color-muted: #c4b09a;
+  --color-glow-sodium: #ffb14a;
+  --color-glow-tv: #6eb3d0;
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --shadow-hairline: 0 0 0 1px color-mix(in srgb, var(--color-ink) 10%, transparent);
+  --shadow-hairline-hover: 0 0 0 1px color-mix(in srgb, var(--color-sodium) 55%, transparent);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html,
+  body,
+  #root {
+    min-height: 100%;
+    background: var(--color-night);
+    color: var(--color-ink);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .voice-up {
+    transform-origin: bottom center;
+  }
+
+  .voice-down {
+    transform-origin: top center;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .voice-up {
+    animation: voice-lfo 10s ease-in-out infinite;
+  }
+
+  .voice-down {
+    animation: voice-lfo 5s ease-in-out infinite;
+    animation-delay: -0.32s;
+  }
+
+  .mark-slip-sodium {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: mark-slip-sodium 10s ease-in-out infinite;
+  }
+
+  .mark-slip-tv {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: mark-slip-tv 10s ease-in-out infinite;
+  }
+}
+
+@keyframes mark-slip-sodium {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(1.6px, 1.6px);
+  }
+}
+
+@keyframes mark-slip-tv {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-1.6px, -1.6px);
+  }
+}

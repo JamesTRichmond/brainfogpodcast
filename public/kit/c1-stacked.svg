@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1600" width="1600" height="1600" role="img" aria-label="Late Night Brain Fog stacked lockup">
+  <title>BRAINFOG-KIT / C1 / stacked</title>
+  <rect width="1600" height="1600" fill="#14110E"/>
+  <g id="mark" transform="translate(800,420)">
+    <circle cx="18" cy="18" r="140" fill="#3A7A9C" fill-opacity="0.86"/>
+    <circle cx="-18" cy="-18" r="140" fill="#E08A32" fill-opacity="0.86"/>
+  </g>
+  <g text-anchor="middle">
+    <g font-family="Space Grotesk, system-ui, sans-serif" font-weight="500" font-size="36" letter-spacing="0.18em">
+      <text x="795" y="740" fill="#E08A32" fill-opacity="0.66">LATE NIGHT</text>
+      <text x="805" y="740" fill="#3A7A9C" fill-opacity="0.66">LATE NIGHT</text>
+      <text x="800" y="740" fill="#C4B09A">LATE NIGHT</text>
+    </g>
+    <g font-family="Fraunces, Georgia, serif" font-weight="700" font-size="110">
+      <text x="794" y="860" fill="#E08A32" fill-opacity="0.66">Brain Fog</text>
+      <text x="806" y="860" fill="#3A7A9C" fill-opacity="0.66">Brain Fog</text>
+      <text x="800" y="860" fill="#F0E4D0">Brain Fog</text>
+    </g>
+  </g>
+</svg>
