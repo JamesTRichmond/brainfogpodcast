@@ -7,5 +7,5 @@ Do not fork a second roadmap. Carry lives inside the next numbered phase.
 3. GitHub, Vercel, the name — closed
 4. Neon waitlist — closed
 5. Tape desk + FFmpeg recipes — closed
-6. First hour — open (human bag / sit / 1-tape)
-7. Cut and Transistor — not opened until click 4 is done
+6. First hour — closed (bag ordered; sit/tape parked on /you)
+7. Cut and Transistor — open (blocked on tape; do not invent an hour)

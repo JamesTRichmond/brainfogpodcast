@@ -32,9 +32,9 @@ export function Clicklist() {
   }
 
   const total = HUMAN_ITEMS.length;
-  const n = HUMAN_ITEMS.filter((s) => done[s.clickId]).length;
+  const n = HUMAN_ITEMS.filter((s) => s.done || done[s.clickId]).length;
   const nextOpen = HUMAN_ITEMS.find((s) => {
-    if (done[s.clickId]) return false;
+    if (s.done || done[s.clickId]) return false;
     if (s.blockedBy == null) return true;
     return Boolean(done[s.blockedBy]);
   });
@@ -70,8 +70,8 @@ export function Clicklist() {
         <section key={g.name} className="flex flex-col gap-2">
           <h2 className="text-xs font-medium uppercase tracking-[0.22em] text-sodium">{g.name}</h2>
           {HUMAN_ITEMS.filter((s) => g.ids.includes(s.clickId)).map((s) => {
-            const blocked = s.blockedBy != null && !done[s.blockedBy];
-            const isDone = Boolean(done[s.clickId]);
+            const blocked = s.blockedBy != null && !HUMAN_ITEMS.find((x) => x.clickId === s.blockedBy)?.done && !done[s.blockedBy];
+            const isDone = Boolean(s.done || done[s.clickId]);
             return (
               <article
                 key={s.clickId}
