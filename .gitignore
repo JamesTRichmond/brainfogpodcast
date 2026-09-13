@@ -2,10 +2,10 @@ node_modules
 .vercel
 .output
 dist
-data
+/data
 *.db
 screenshots
-artifacts
+/artifacts
 attachments
 .grok
 .env
